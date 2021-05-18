@@ -1,0 +1,36 @@
+<!doctype html>
+
+
+<html>
+
+<style>
+    form {
+        margin-top: 20%;
+        margin-left: 40%;
+        width: 35%;
+    }
+    .result {
+        margin: auto;
+        width: 35%;
+        border: 1px solid #ccc;
+    }
+</style>
+
+<head>
+    <title>speech rec app</title>
+</head>
+    <form action="/" method="post">
+        <label>Path for audio file</label>
+        <input name = "path" required>
+        <br>
+        <input type="submit">
+    </form>
+
+    <div class = "result">
+        {% if result %}
+            <br>
+            Predicted mood based on audio file:
+            <p style="font-size:large">{{result}}</p>
+        {% endif %}
+    </div>
+</html>
